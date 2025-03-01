@@ -19,3 +19,7 @@ async function loadPolygon() {
     
 }
 loadPolygon();
+
+let btnTrees = document.getElementById('btnTrees');
+
+btnTrees.addEventListener('click', ()=> alert("Hola"));
