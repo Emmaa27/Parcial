@@ -20,6 +20,20 @@ async function loadPolygon() {
 }
 loadPolygon();
 
+async function loadTrees() {
+    let myData = await fetch ('arboles_elplan.geojson');
+    let myPolygon = await myData.json();
+
+    L.geoJSON(myPolygon,
+        {
+            style: {
+                color: 'orange'
+            }
+        }
+    ).addTo(map);
+    
+}
+loadTrees();
 let btnTrees = document.getElementById('btnTrees');
 
 btnTrees.addEventListener('click', ()=> alert("Hola"));
